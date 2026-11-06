@@ -120,3 +120,32 @@ Use these curated design palettes, typography pairings, multi-day chapter struct
   5. **03 // Mishti & Bhoj Tier List**: Asymmetric 12-column Bento grid (`7 + 5` top row, `4 + 4 + 4` bottom row) with expandable tasting notes for *Nolen Gur Sandesh (🏆 GOAT Tier)*, *Rosogolla (👑 Main Character)*, *Pantua*, *Darbesh*, and *Luchi & Chholar Dal (💛 Elite Brunch)*.
   6. **04 // Virtual Phonta Card Studio**: Vibe preset chips (`✨ Classic Blessing`, `🤝 Partner in Crime`, `🎁 Gift Tax Due`, `💛 100 Years`), animated Tilak stamp card, confetti burst, native `navigator.share`, and `1200×800` Canvas PNG export.
   7. **05 // 1-Tap Copy Wishes**: Staggered WhatsApp/DM-ready sibling wish cards.
+
+---
+
+## 12. Igas-Bagwal / Budhi Diwali (Uttarakhand Himalayan Festival of Lights – Gen Z Zine Edition)
+- **Observed**: *Kartik Shukla Ekadashi* (11 days after Diwali across Garhwal & Kumaon, Devbhoomi Uttarakhand).
+- **Welcoming Warm Palette**:
+  - Surface Ivory (`--ivory`): `#FFFBF2` & Chandan Cream (`--cream`): `#FDF3DF`
+  - Pahadi *Geru* Terracotta (`--crimson`): `#B83B2A` & Deep Rust Maroon (`--crimson-d`): `#8E281B`
+  - Bhailo Marigold Saffron (`--saffron`): `#E07A2E` & Soft Festive Peach (`--peach`): `#FFE5CC`
+  - Honey Diya Gold (`--gold`): `#D99B26` & Bright Gold (`--gold-l`): `#F6C453`
+  - Deodar Pine (`--pine`): `#244728`, Roasted Espresso (`--kajal`): `#3B231A`, & Cinnamon Muted (`--muted`): `#6E4F41`
+  - Card Studio Surface (`.gen`): Warm Rosewood-Terracotta gradient (`linear-gradient(135deg, #6B2419 0%, #4A1810 100%)`)
+- **Asymmetric Font Stack**:
+  - `Syne` (700/800) for wide asymmetric display headers, section index pills (`01 // THE SACRED LORE`), and sticker tags.
+  - `Playfair Display` (italic 400/600/700) spliced mid-headline (`Budhi *Diwali*, where the...`) with wavy underlines.
+  - `Caveat` (600/700) for tilted handwritten scribble notes (`← the anthem of every Pahadi courtyard!`, `✎ echoed across every Garhwali kholi!`), Polaroid captions, and card sign-offs.
+  - `Tiro Devanagari Hindi` for Garhwali/Hindi folk chants (`“भैलो रे भैलो, काखड़ी को रैलू, ओ भैलो...”`) and bilingual titles.
+  - `Plus Jakarta Sans` for body copy and UI controls.
+- **3-Layer Translucent Background Artwork (`body::before`) + Hero Hillscape (`.hero-hills`)**:
+  - `body::before` combines: (1) a panoramic 3-ridgeline Himalayan snow-peak & foothill horizon anchored to `center bottom`, (2) an off-center (`78% 18%`) octagonal Pahadi *Aipan* mandala & whirling *Bhailo* flame, and (3) a `160×160` repeating Pahadi geometric lattice.
+  - `.hero-hills` adds a layered panoramic SVG horizon at the base of `.hero` showing sunlit snow peaks, terraced hills, glowing hillside village *diyas*, and a foreground Deodar pine silhouette.
+- **Asymmetric Zine Sections**:
+  1. **Split Hero + Multi-Layer Polaroid Collage (`.hero-collage`)**: Left-aligned mixed-font headline + right-side tilted Polaroid (`+2.6deg`, `z-index: 2`) over a backing Garhwali postcard (`-6.5deg`, `z-index: 1`) with top Washi tape, `140×120` SVG night courtyard stage (snow peaks, *Aipan* border, *Dhol* drum, clay *diyas*, and an animated whirling *Bhailo* fire ring), and top-level floating stickers (`🔥 Bhailo Khelna`, `🏔️ 11 Days Later` at `z-index: 4`).
+  2. **Diagonal Marquee Ribbon**: Tilted (`-1.1deg`) ticker mixing `शुभ इगास-बग्वाल` and `भैलो रे भैलो` with Gen Z Pahadi callouts (`✦ 11 DAYS LATER = MOUNTAIN TIME 🏔️`, `✦ ARSA & SWUNLA OVERLOAD 🍯`, `✦ DHOL-DAMAU COURTYARD DROP 🥁`).
+  3. **01 // The Sacred Lore**: `1.2fr / 0.85fr` asymmetric split with taped Garhwali *Bhailo* chant card + rotated lore cards (*Madho Singh Bhandari’s Return from Dapaghati* & *News Crossing the High Passes 11 Days Later*).
+  4. **02 // Core Rituals of Igas**: Staggered 3-column grid (`.stagger-3`) covering *Bhailo Khelna (Whirling Pine & Bhimal Fire)*, *Pashu Dhan Puja (Honoring Cattle with Pinda)*, and *Aipan, Chhura & Jhumelo (Courtyard Folk Dance)*.
+  5. **03 // Pahadi Bhoj Tier List**: Asymmetric 12-column Bento grid (`7 + 5` top row, `4 + 4 + 4` bottom row) with expandable tasting notes for *Arsa & Gur Pakwan (🏆 GOAT Tier)*, *Swunla, Puri & Urad Pakora (👑 Main Character)*, *Gahat Dal & Mandua (🔥 Winter Armor)*, *Jhangora ki Kheer (💛 Comfort Bowl)*, and *Pashu Pinda & Roat (🌾 Sacred First Share)*.
+  6. **04 // Virtual Bhailo & Greeting Card Studio**: Vibe preset chips (`✨ Classic Blessing`, `🔥 Bhailo Squad`, `🍯 Arsa Tax Due`, `🏔️ Himalayan Roots`), animated Bhailo spinner, warm-palette confetti burst, stamp-bordered `#card`, native `navigator.share`, and `1200×800` Canvas PNG export.
+  7. **05 // 1-Tap Quick Wishes**: Staggered WhatsApp/DM-ready Garhwali/Hindi and English wish cards.

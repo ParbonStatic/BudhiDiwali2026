@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#FFFBF2" />
+  <meta name="theme-color" content="#0D0806" />
+  <meta name="color-scheme" content="dark" />
   <title>इगास-बग्वाल | Budhi Diwali — A Himalayan Zine Tribute</title>
   <meta name="description" content="Celebrate Igas-Bagwal (Budhi Diwali), Uttarakhand's festival of lights observed 11 days after Diwali. Explore Madho Singh Bhandari folklore, whirling Bhailo fire rituals, Pahadi Bhoj tier list, and create a downloadable 1200x800 Pahadi greeting card." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -38,20 +39,34 @@
 
   <style>
     :root {
+      /* Accents */
       --ivory: #FFFBF2;
       --cream: #FDF3DF;
-      --crimson: #B83B2A;
-      --crimson-d: #8E281B;
-      --saffron: #E07A2E;
+      --crimson: #E0533D;
+      --crimson-d: #B83B2A;
+      --saffron: #FF8A3D;
       --peach: #FFE5CC;
-      --gold: #D99B26;
+      --gold: #F6C453;
       --gold-l: #F6C453;
       --pine: #244728;
       --kajal: #3B231A;
       --muted: #6E4F41;
-      --line: rgba(59, 35, 26, 0.16);
-      --shadow-hard: 5px 6px 0 var(--kajal);
-      --shadow-soft: 0 18px 42px rgba(59, 35, 26, 0.1);
+      --ember: linear-gradient(120deg, #FFD97A 0%, #FF8A3D 48%, #E0533D 100%);
+      --on-accent: #1B0F09;
+
+      /* Warm Himalayan-night surfaces & text (no cold blacks) */
+      --bg: #0D0806;
+      --surface-1: #1C120D;
+      --surface-2: #241710;
+      --surface-3: #2E1D15;
+      --text: #F7EDE2;
+      --text-2: #C9B6A6;
+      --text-3: #8C7768;
+      --line-c: #5E4334;
+      --shadow-c: rgba(224, 83, 61, 0.42);
+      --line: rgba(255, 220, 180, 0.14);
+      --shadow-hard: 5px 6px 0 var(--shadow-c);
+      --shadow-soft: 0 18px 42px rgba(0, 0, 0, 0.45);
     }
 
     *, *::before, *::after {
@@ -65,14 +80,14 @@
 
     body {
       margin: 0;
-      background-color: var(--ivory);
-      color: var(--kajal);
+      background-color: var(--bg);
+      color: var(--text);
       font: 400 16px/1.68 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* Full-Viewport Translucent Cultural Backdrop (Aipan Mandala + Whirling Bhailo + Lattice) */
+    /* Full-Viewport Translucent Cultural Backdrop (Himalayan Hills Panorama + Aipan Mandala + Lattice) */
     body::before {
       content: "";
       position: fixed;
@@ -81,11 +96,12 @@
       pointer-events: none;
       opacity: 0.12;
       background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 420' preserveAspectRatio='none'%3E%3Cg fill='none'%3E%3Cpath d='M0 290 L130 195 L235 248 L385 110 L525 235 L680 140 L835 250 L995 88 L1165 232 L1295 155 L1440 220 L1440 420 L0 420 Z' fill='%23D99B26' opacity='0.42'/%3E%3Cpath d='M330 158 L385 110 L442 162 L408 148 L385 132 L362 150 Z M935 142 L995 88 L1060 146 L1022 132 L995 112 L968 134 Z' fill='%23FFFBF2' opacity='0.85'/%3E%3Cpath d='M0 335 L165 268 L315 312 L495 215 L675 305 L830 238 L1015 315 L1205 228 L1345 292 L1440 262 L1440 420 L0 420 Z' fill='%23E07A2E' opacity='0.48'/%3E%3Cpath d='M0 378 L185 332 L370 362 L575 308 L780 360 L985 316 L1195 365 L1350 332 L1440 348 L1440 420 L0 420 Z' fill='%23B83B2A' opacity='0.55'/%3E%3C/g%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 520' width='520' height='520'%3E%3Cg fill='none' stroke='%23B83B2A' stroke-width='2'%3E%3Ccircle cx='260' cy='260' r='230'/%3E%3Ccircle cx='260' cy='260' r='195' stroke-dasharray='8 6' stroke='%23D99B26'/%3E%3Ccircle cx='260' cy='260' r='145'/%3E%3Cpolygon points='260,40 315,205 480,260 315,315 260,480 205,315 40,260 205,205' stroke='%23B83B2A' stroke-width='2.2'/%3E%3Cpolygon points='104,104 305,185 416,416 215,335' stroke='%23E07A2E'/%3E%3Cpolygon points='416,104 335,305 104,416 185,215' stroke='%23E07A2E'/%3E%3Ccircle cx='260' cy='260' r='78' stroke='%23D99B26' stroke-width='3' stroke-dasharray='36 12'/%3E%3Cpath d='M260 205 C282 232 246 244 272 268 C242 274 234 250 246 228 Z' fill='%23E07A2E' stroke='none'/%3E%3Ccircle cx='260' cy='260' r='12' fill='%23B83B2A'/%3E%3C/g%3E%3C/svg%3E"),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160' width='160' height='160'%3E%3Cg fill='none' stroke='%23B83B2A' stroke-width='1.1' opacity='0.65'%3E%3Cpath d='M80 12 L94 26 L80 40 L66 26 Z'/%3E%3Ccircle cx='80' cy='26' r='3' fill='%23D99B26'/%3E%3Cpath d='M12 80 L26 66 L40 80 L26 94 Z'/%3E%3Cpath d='M120 80 L134 66 L148 80 L134 94 Z'/%3E%3Cpath d='M80 120 L94 134 L80 148 L66 134 Z'/%3E%3Ccircle cx='80' cy='80' r='14' stroke-dasharray='4 4' stroke='%23E07A2E'/%3E%3Ccircle cx='80' cy='80' r='3' fill='%23B83B2A'/%3E%3C/g%3E%3C/svg%3E");
-      background-repeat: no-repeat, repeat;
-      background-position: 78% 22%, 0 0;
-      background-size: 540px 540px, 160px 160px;
+      background-repeat: no-repeat, no-repeat, repeat;
+      background-position: center bottom, 78% 18%, 0 0;
+      background-size: 100% 360px, 520px 520px, 160px 160px;
     }
 
     main, header, footer {
@@ -95,7 +111,7 @@
 
     ::selection {
       background: var(--gold-l);
-      color: var(--kajal);
+      color: var(--text);
     }
 
     :focus-visible {
@@ -155,29 +171,29 @@
       gap: 9px;
       min-height: 48px;
       padding: 12px 22px;
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 16px 22px 14px 20px;
       font-family: 'Syne', sans-serif;
       font-weight: 700;
       font-size: 0.88rem;
       letter-spacing: 0.02em;
-      box-shadow: 4px 4px 0 var(--kajal);
+      box-shadow: 4px 4px 0 var(--shadow-c);
       transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
     }
 
     .btn:hover {
       transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0 var(--kajal);
+      box-shadow: 6px 6px 0 var(--shadow-c);
     }
 
     .btn:active {
       transform: translate(1px, 1px);
-      box-shadow: 2px 2px 0 var(--kajal);
+      box-shadow: 2px 2px 0 var(--shadow-c);
     }
 
     .btn-primary {
       background: var(--gold-l);
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .btn-primary:hover {
@@ -194,12 +210,12 @@
     }
 
     .btn-ivory {
-      background: var(--ivory);
-      color: var(--kajal);
+      background: var(--surface-1);
+      color: var(--text);
     }
 
     .btn-ivory:hover {
-      background: var(--peach);
+      background: var(--surface-3);
     }
 
     /* 1. Floating Off-Beat Glassmorphic Navbar */
@@ -214,11 +230,11 @@
     .nav {
       max-width: 1140px;
       margin: 0 auto;
-      background: rgba(255, 251, 242, 0.9);
+      background: rgba(20, 12, 9, 0.85);
       backdrop-filter: blur(14px);
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 20px 28px 18px 26px;
-      box-shadow: 4px 5px 0 rgba(59, 35, 26, 0.9);
+      box-shadow: 4px 5px 0 var(--shadow-c);
       padding: 10px 18px;
       display: flex;
       align-items: center;
@@ -240,11 +256,11 @@
       border-radius: 13px 17px 12px 16px;
       background: var(--crimson);
       color: var(--gold-l);
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       display: grid;
       place-items: center;
       font-size: 1.35rem;
-      box-shadow: 2px 3px 0 var(--kajal);
+      box-shadow: 2px 3px 0 var(--shadow-c);
       flex: none;
     }
 
@@ -252,7 +268,7 @@
       font-weight: 800;
       font-size: 1.05rem;
       line-height: 1.15;
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .brand-sub {
@@ -276,7 +292,7 @@
       font-family: 'Syne', sans-serif;
       font-size: 0.76rem;
       font-weight: 700;
-      color: var(--kajal);
+      color: var(--text);
       transition: color 0.18s;
       white-space: nowrap;
     }
@@ -288,10 +304,10 @@
     .nav-links .nav-cta {
       background: var(--crimson);
       color: var(--ivory);
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 999px;
       padding: 8px 15px;
-      box-shadow: 3px 3px 0 var(--kajal);
+      box-shadow: 3px 3px 0 var(--shadow-c);
       transform: rotate(1.2deg);
       transition: transform 0.18s, background 0.18s;
     }
@@ -306,24 +322,35 @@
       display: none;
       width: 42px;
       height: 40px;
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 12px;
-      background: var(--cream);
-      color: var(--kajal);
+      background: var(--surface-2);
+      color: var(--text);
       align-items: center;
       justify-content: center;
-      box-shadow: 2px 3px 0 var(--kajal);
+      box-shadow: 2px 3px 0 var(--shadow-c);
     }
 
     /* 2. Asymmetric Split Hero + Multi-Layer Polaroid Collage */
     .hero {
-      padding: 46px 0 68px;
+      padding: 46px 0 118px;
       position: relative;
       overflow: hidden;
       background:
-        radial-gradient(circle at 82% 28%, rgba(246, 196, 83, 0.28) 0%, transparent 46%),
-        radial-gradient(circle at 14% 75%, rgba(224, 122, 46, 0.15) 0%, transparent 45%),
-        linear-gradient(180deg, rgba(255, 251, 242, 0.75) 0%, rgba(253, 243, 223, 0.86) 100%);
+        radial-gradient(circle at 82% 28%, rgba(246, 196, 83, 0.32) 0%, transparent 46%),
+        radial-gradient(circle at 14% 75%, rgba(224, 122, 46, 0.18) 0%, transparent 45%),
+        linear-gradient(180deg, rgba(255, 251, 242, 0.72) 0%, rgba(253, 243, 223, 0.88) 70%, rgba(255, 229, 204, 0.92) 100%);
+    }
+
+    .hero-hills {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 290px;
+      z-index: 1;
+      pointer-events: none;
     }
 
     /* Soft translucent SVG watermark inside Hero */
@@ -356,9 +383,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--peach);
-      color: var(--crimson-d);
-      border: 2px solid var(--kajal);
+      background: var(--surface-3);
+      color: var(--saffron);
+      border: 2px solid var(--line-c);
       border-radius: 999px;
       padding: 6px 15px;
       font-family: 'Syne', sans-serif;
@@ -366,7 +393,7 @@
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      box-shadow: 3px 3px 0 var(--kajal);
+      box-shadow: 3px 3px 0 var(--shadow-c);
       transform: rotate(-1.4deg);
     }
 
@@ -377,7 +404,7 @@
       line-height: 1.07;
       letter-spacing: -0.03em;
       margin: 20px 0 16px;
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .hero h1 .hindi {
@@ -392,7 +419,7 @@
 
     .hero-lead {
       font-size: 1.05rem;
-      color: var(--muted);
+      color: var(--text-2);
       max-width: 590px;
       margin: 0 0 16px;
     }
@@ -402,13 +429,13 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 10px;
-      background: rgba(255, 253, 248, 0.92);
+      background: rgba(30, 19, 14, 0.88);
       border: 1.5px dashed var(--crimson);
       border-radius: 14px;
       padding: 10px 16px;
       margin-bottom: 24px;
       font-size: 1.08rem;
-      color: var(--crimson-d);
+      color: var(--saffron);
     }
 
     .hero-actions {
@@ -441,11 +468,11 @@
       inset: 18px 20px 26px 12px;
       z-index: 1;
       background: linear-gradient(145deg, var(--crimson) 0%, var(--crimson-d) 100%);
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 16px;
       padding: 14px 16px;
       transform: rotate(-6.5deg);
-      box-shadow: 5px 6px 0 var(--kajal);
+      box-shadow: 5px 6px 0 var(--shadow-c);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -473,13 +500,13 @@
     .polaroid {
       position: relative;
       z-index: 2;
-      background: var(--ivory);
-      color: var(--kajal);
-      border: 2.5px solid var(--kajal);
+      background: var(--surface-1);
+      color: var(--text);
+      border: 2.5px solid var(--line-c);
       border-radius: 16px;
       padding: 13px 13px 16px;
       transform: rotate(2.6deg);
-      box-shadow: 7px 8px 0 var(--kajal);
+      box-shadow: 7px 8px 0 var(--shadow-c);
       transition: transform 0.28s ease;
     }
 
@@ -498,13 +525,13 @@
       transform: translateX(-50%) rotate(-2.2deg);
       background: rgba(246, 196, 83, 0.85);
       border: 1.5px dashed var(--crimson-d);
-      box-shadow: 0 2px 5px rgba(59, 35, 26, 0.15);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
       z-index: 3;
     }
 
     .polaroid-stage {
       background: radial-gradient(circle at 52% 44%, #5c2418 0%, #3b1912 68%, #26100b 100%);
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 10px;
       overflow: hidden;
       position: relative;
@@ -546,7 +573,7 @@
       font-size: 1.3rem;
       font-weight: 700;
       line-height: 1.15;
-      color: var(--kajal);
+      color: var(--text);
       margin: 5px 0 2px;
       text-align: center;
     }
@@ -554,7 +581,7 @@
     .polaroid-sub {
       font-family: 'Tiro Devanagari Hindi', serif;
       font-size: 0.8rem;
-      color: var(--muted);
+      color: var(--text-2);
       text-align: center;
       margin: 0;
     }
@@ -566,16 +593,16 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: var(--ivory);
-      color: var(--kajal);
-      border: 2px solid var(--kajal);
+      background: var(--surface-1);
+      color: var(--text);
+      border: 2px solid var(--line-c);
       border-radius: 999px;
       padding: 5px 12px;
       font-family: 'Syne', sans-serif;
       font-size: 0.68rem;
       font-weight: 800;
       letter-spacing: 0.04em;
-      box-shadow: 3px 4px 0 var(--kajal);
+      box-shadow: 3px 4px 0 var(--shadow-c);
       white-space: nowrap;
     }
 
@@ -589,8 +616,8 @@
     .floating-tag.tag-bottom {
       bottom: 4px;
       right: 0;
-      background: var(--peach);
-      color: var(--crimson-d);
+      background: var(--surface-3);
+      color: var(--saffron);
       transform: rotate(4.2deg);
     }
 
@@ -606,12 +633,12 @@
     .marquee {
       background: var(--crimson);
       color: var(--ivory);
-      border-top: 2.5px solid var(--kajal);
-      border-bottom: 2.5px solid var(--kajal);
+      border-top: 2.5px solid var(--line-c);
+      border-bottom: 2.5px solid var(--line-c);
       padding: 12px 0;
       overflow: hidden;
       transform: rotate(-1.1deg) scale(1.02);
-      box-shadow: 0 6px 0 rgba(59, 35, 26, 0.14);
+      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.35);
       margin: 6px 0 18px;
       position: relative;
       z-index: 3;
@@ -639,10 +666,10 @@
       font-size: 1rem;
       font-weight: 400;
       background: var(--gold-l);
-      color: var(--kajal);
+      color: var(--text);
       padding: 2px 11px;
       border-radius: 999px;
-      border: 1.5px solid var(--kajal);
+      border: 1.5px solid var(--line-c);
     }
 
     @keyframes marquee-scroll {
@@ -657,9 +684,9 @@
     }
 
     .section-tint {
-      background: rgba(253, 243, 223, 0.65);
-      border-top: 1.5px dashed rgba(59, 35, 26, 0.18);
-      border-bottom: 1.5px dashed rgba(59, 35, 26, 0.18);
+      background: rgba(255, 236, 214, 0.03);
+      border-top: 1.5px dashed rgba(255, 220, 180, 0.16);
+      border-bottom: 1.5px dashed rgba(255, 220, 180, 0.16);
     }
 
     .sec-head {
@@ -676,9 +703,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--cream);
+      background: var(--surface-2);
       color: var(--crimson);
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 999px;
       padding: 4px 13px;
       font-family: 'Syne', sans-serif;
@@ -686,7 +713,7 @@
       font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      box-shadow: 3px 3px 0 var(--kajal);
+      box-shadow: 3px 3px 0 var(--shadow-c);
     }
 
     .sec-head h2 {
@@ -696,11 +723,11 @@
       line-height: 1.12;
       letter-spacing: -0.03em;
       margin: 14px 0 12px;
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .sec-head p {
-      color: var(--muted);
+      color: var(--text-2);
       margin: 0;
       font-size: 1rem;
     }
@@ -714,9 +741,9 @@
     }
 
     .chhara-card {
-      background: rgba(255, 253, 248, 0.92);
+      background: rgba(30, 19, 14, 0.88);
       backdrop-filter: blur(8px);
-      border: 2.5px solid var(--kajal);
+      border: 2.5px solid var(--line-c);
       border-radius: 24px 12px 26px 14px;
       padding: 34px 30px;
       box-shadow: var(--shadow-hard);
@@ -751,8 +778,8 @@
       font-family: 'Tiro Devanagari Hindi', Georgia, serif;
       font-size: clamp(1.38rem, 2.4vw, 1.82rem);
       line-height: 1.65;
-      color: var(--kajal);
-      background: var(--cream);
+      color: var(--text);
+      background: var(--surface-2);
       border-left: 4px solid var(--crimson);
       border-radius: 0 14px 14px 0;
       padding: 16px 20px;
@@ -762,13 +789,13 @@
     .chhara-translit {
       font-family: 'Playfair Display', Georgia, serif;
       font-style: italic;
-      color: var(--crimson-d);
+      color: var(--saffron);
       font-size: 1.02rem;
       margin: 0 0 12px;
     }
 
     .chhara-meaning {
-      color: var(--muted);
+      color: var(--text-2);
       font-size: 0.95rem;
       margin: 0 0 18px;
     }
@@ -779,12 +806,12 @@
     }
 
     .lore-mini {
-      background: rgba(255, 253, 248, 0.92);
+      background: rgba(30, 19, 14, 0.88);
       backdrop-filter: blur(8px);
-      border: 2px solid var(--kajal);
+      border: 2px solid var(--line-c);
       border-radius: 18px 24px 14px 22px;
       padding: 24px 22px;
-      box-shadow: 4px 5px 0 var(--kajal);
+      box-shadow: 4px 5px 0 var(--shadow-c);
       transition: transform 0.2s ease;
     }
 
@@ -794,7 +821,7 @@
 
     .lore-mini:nth-child(2) {
       transform: rotate(-1deg);
-      background: var(--cream);
+      background: var(--surface-2);
     }
 
     .lore-mini:hover {
@@ -814,13 +841,13 @@
       font-family: 'Syne', sans-serif;
       font-size: 1.25rem;
       margin: 8px 0 8px;
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .lore-mini p {
       margin: 0;
       font-size: 0.91rem;
-      color: var(--muted);
+      color: var(--text-2);
     }
 
     /* 5. Section 02: Staggered 3-Column Ritual Grid (.stagger-3) */
@@ -832,9 +859,9 @@
     }
 
     .ritual-card {
-      background: rgba(255, 253, 248, 0.92);
+      background: rgba(30, 19, 14, 0.88);
       backdrop-filter: blur(8px);
-      border: 2.5px solid var(--kajal);
+      border: 2.5px solid var(--line-c);
       border-radius: 22px 12px 24px 14px;
       padding: 28px 24px;
       box-shadow: var(--shadow-hard);
@@ -848,7 +875,7 @@
     .ritual-card:nth-child(2) {
       margin-top: 1.8rem;
       transform: rotate(0.9deg);
-      background: var(--cream);
+      background: var(--surface-2);
     }
 
     .ritual-card:nth-child(3) {
@@ -870,12 +897,12 @@
       width: 56px;
       height: 56px;
       border-radius: 16px 12px 18px 10px;
-      border: 2px solid var(--kajal);
-      background: var(--peach);
+      border: 2px solid var(--line-c);
+      background: var(--surface-3);
       display: grid;
       place-items: center;
       font-size: 1.75rem;
-      box-shadow: 3px 3px 0 var(--kajal);
+      box-shadow: 3px 3px 0 var(--shadow-c);
     }
 
     .ritual-step {
@@ -884,8 +911,8 @@
       font-weight: 800;
       letter-spacing: 0.1em;
       color: var(--crimson);
-      background: var(--ivory);
-      border: 1.5px solid var(--kajal);
+      background: var(--surface-1);
+      border: 1.5px solid var(--line-c);
       padding: 4px 10px;
       border-radius: 999px;
     }
@@ -894,7 +921,7 @@
       font-family: 'Syne', sans-serif;
       font-size: 1.38rem;
       margin: 0 0 4px;
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .ritual-card .local {
@@ -906,7 +933,7 @@
 
     .ritual-card p:last-child {
       margin: 0;
-      color: var(--muted);
+      color: var(--text-2);
       font-size: 0.92rem;
     }
 
@@ -918,9 +945,9 @@
     }
 
     .bento-card {
-      background: rgba(255, 253, 248, 0.92);
+      background: rgba(30, 19, 14, 0.88);
       backdrop-filter: blur(8px);
-      border: 2.5px solid var(--kajal);
+      border: 2.5px solid var(--line-c);
       border-radius: 24px 10px 22px 12px;
       padding: 26px 24px;
       box-shadow: var(--shadow-hard);
@@ -934,7 +961,7 @@
       transform: translateY(-4px);
     }
 
-    .bento-span-7 { grid-column: span 7; background: var(--cream); }
+    .bento-span-7 { grid-column: span 7; background: var(--surface-2); }
     .bento-span-5 { grid-column: span 5; }
     .bento-span-4 { grid-column: span 4; }
 
@@ -951,8 +978,8 @@
       align-items: center;
       gap: 5px;
       background: var(--gold-l);
-      color: var(--kajal);
-      border: 2px solid var(--kajal);
+      color: var(--text);
+      border: 2px solid var(--line-c);
       border-radius: 999px;
       padding: 4px 12px;
       font-family: 'Syne', sans-serif;
@@ -960,19 +987,19 @@
       font-weight: 800;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      box-shadow: 2px 3px 0 var(--kajal);
+      box-shadow: 2px 3px 0 var(--shadow-c);
     }
 
     .bento-emoji {
       width: 54px;
       height: 54px;
       border-radius: 14px;
-      background: var(--ivory);
-      border: 2px solid var(--kajal);
+      background: var(--surface-1);
+      border: 2px solid var(--line-c);
       display: grid;
       place-items: center;
       font-size: 1.9rem;
-      box-shadow: 2px 3px 0 var(--kajal);
+      box-shadow: 2px 3px 0 var(--shadow-c);
       flex: none;
     }
 
@@ -980,7 +1007,7 @@
       font-family: 'Syne', sans-serif;
       font-size: 1.4rem;
       margin: 0 0 4px;
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .bento-hi {
@@ -991,38 +1018,38 @@
     }
 
     .bento-card p {
-      color: var(--muted);
+      color: var(--text-2);
       font-size: 0.92rem;
       margin: 0 0 14px;
     }
 
     .taste-toggle {
       align-self: flex-start;
-      background: var(--ivory);
-      color: var(--kajal);
-      border: 1.5px solid var(--kajal);
+      background: var(--surface-1);
+      color: var(--text);
+      border: 1.5px solid var(--line-c);
       border-radius: 999px;
       padding: 5px 13px;
       font-family: 'Syne', sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
-      box-shadow: 2px 2px 0 var(--kajal);
+      box-shadow: 2px 2px 0 var(--shadow-c);
       transition: background 0.15s;
     }
 
     .taste-toggle:hover {
-      background: var(--peach);
+      background: var(--surface-3);
     }
 
     .taste-note {
       display: none;
       margin-top: 12px;
       padding: 11px 14px;
-      background: var(--ivory);
+      background: var(--surface-1);
       border: 1.5px dashed var(--crimson);
       border-radius: 12px;
       font-size: 0.85rem;
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .taste-note.open {
@@ -1033,8 +1060,8 @@
     .gen {
       background: linear-gradient(135deg, #6B2419 0%, #4A1810 100%);
       color: var(--ivory);
-      border-top: 3px solid var(--kajal);
-      border-bottom: 3px solid var(--kajal);
+      border-top: 3px solid var(--line-c);
+      border-bottom: 3px solid var(--line-c);
       position: relative;
       overflow: hidden;
     }
@@ -1074,12 +1101,12 @@
     }
 
     .studio-panel {
-      background: var(--ivory);
-      color: var(--kajal);
-      border: 2.5px solid var(--kajal);
+      background: var(--surface-1);
+      color: var(--text);
+      border: 2.5px solid var(--line-c);
       border-radius: 24px 14px 22px 16px;
       padding: 30px 26px;
-      box-shadow: 7px 8px 0 rgba(25, 10, 6, 0.75);
+      box-shadow: 7px 8px 0 var(--shadow-c);
     }
 
     .studio-panel h3 {
@@ -1089,7 +1116,7 @@
     }
 
     .studio-panel > p {
-      color: var(--muted);
+      color: var(--text-2);
       font-size: 0.9rem;
       margin: 0 0 18px;
     }
@@ -1113,26 +1140,26 @@
     }
 
     .vibe-chip {
-      background: var(--cream);
-      color: var(--kajal);
-      border: 2px solid var(--kajal);
+      background: var(--surface-2);
+      color: var(--text);
+      border: 2px solid var(--line-c);
       border-radius: 999px;
       padding: 6px 12px;
       font-family: 'Syne', sans-serif;
       font-size: 0.72rem;
       font-weight: 700;
-      box-shadow: 2px 3px 0 var(--kajal);
+      box-shadow: 2px 3px 0 var(--shadow-c);
       transition: transform 0.15s, background 0.15s;
     }
 
     .vibe-chip:hover {
       transform: translateY(-1px);
-      background: var(--peach);
+      background: var(--surface-3);
     }
 
     .vibe-chip.active {
       background: var(--gold-l);
-      color: var(--kajal);
+      color: var(--text);
     }
 
     .form-row {
@@ -1149,17 +1176,17 @@
       display: block;
       font-weight: 700;
       font-size: 0.82rem;
-      color: var(--kajal);
+      color: var(--text);
       margin-bottom: 6px;
     }
 
     .field {
       width: 100%;
       padding: 11px 13px;
-      background: #fff;
-      border: 2px solid var(--kajal);
+      background: rgba(0, 0, 0, 0.3);
+      border: 2px solid var(--line-c);
       border-radius: 12px;
-      color: var(--kajal);
+      color: var(--text);
       font-size: 0.92rem;
     }
 
@@ -1225,12 +1252,12 @@
 
     /* Stamp-Style Live DOM Card (#card) */
     .stamp-card-outer {
-      background: var(--ivory);
-      color: var(--kajal);
-      border: 3px solid var(--kajal);
+      background: var(--surface-1);
+      color: var(--text);
+      border: 3px solid var(--line-c);
       border-radius: 22px;
       padding: 14px;
-      box-shadow: 8px 9px 0 rgba(25, 10, 6, 0.8);
+      box-shadow: 8px 9px 0 var(--shadow-c);
       transform: rotate(0.8deg);
       position: relative;
     }
@@ -1248,9 +1275,9 @@
 
     .card-vibe-tag {
       display: inline-block;
-      background: var(--peach);
-      color: var(--crimson-d);
-      border: 1.5px solid var(--kajal);
+      background: var(--surface-3);
+      color: var(--saffron);
+      border: 1.5px solid var(--line-c);
       border-radius: 999px;
       padding: 4px 13px;
       font-family: 'Syne', sans-serif;
@@ -1258,7 +1285,7 @@
       font-weight: 800;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      box-shadow: 2px 2px 0 var(--kajal);
+      box-shadow: 2px 2px 0 var(--shadow-c);
       margin-bottom: 10px;
     }
 
@@ -1290,14 +1317,14 @@
       font-family: 'Syne', sans-serif;
       font-size: 0.85rem;
       font-weight: 800;
-      color: var(--kajal);
+      color: var(--text);
       margin: 0 0 12px;
     }
 
     .card-msg-hi {
       font-family: 'Tiro Devanagari Hindi', Georgia, serif;
       font-size: 1.05rem;
-      color: var(--kajal);
+      color: var(--text);
       line-height: 1.7;
       margin: 0 0 10px;
     }
@@ -1306,7 +1333,7 @@
       font-family: 'Playfair Display', Georgia, serif;
       font-style: italic;
       font-size: 0.96rem;
-      color: var(--muted);
+      color: var(--text-2);
       line-height: 1.6;
       margin: 0 0 14px;
     }
@@ -1315,7 +1342,7 @@
       font-family: 'Caveat', cursive;
       font-size: 1.42rem;
       font-weight: 700;
-      color: var(--crimson-d);
+      color: var(--saffron);
       margin: 6px 0 0;
     }
 
@@ -1349,12 +1376,12 @@
     }
 
     .wish-card {
-      background: rgba(255, 253, 248, 0.92);
+      background: rgba(30, 19, 14, 0.88);
       backdrop-filter: blur(8px);
-      border: 2.5px solid var(--kajal);
+      border: 2.5px solid var(--line-c);
       border-radius: 20px 12px 22px 14px;
       padding: 24px 22px;
-      box-shadow: 4px 5px 0 var(--kajal);
+      box-shadow: 4px 5px 0 var(--shadow-c);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1362,7 +1389,7 @@
     }
 
     .wish-card:nth-child(odd) { transform: rotate(-0.6deg); }
-    .wish-card:nth-child(even) { transform: rotate(0.7deg); background: var(--cream); }
+    .wish-card:nth-child(even) { transform: rotate(0.7deg); background: var(--surface-2); }
 
     .wish-card-top {
       display: flex;
@@ -1378,8 +1405,8 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--crimson);
-      background: var(--peach);
-      border: 1.5px solid var(--kajal);
+      background: var(--surface-3);
+      border: 1.5px solid var(--line-c);
       border-radius: 999px;
       padding: 3px 11px;
     }
@@ -1387,28 +1414,28 @@
     .wish-text-hi {
       font-family: 'Tiro Devanagari Hindi', serif;
       font-size: 1.05rem;
-      color: var(--kajal);
+      color: var(--text);
       margin: 8px 0 6px;
       line-height: 1.65;
     }
 
     .wish-text-en {
       font-size: 0.9rem;
-      color: var(--muted);
+      color: var(--text-2);
       margin: 0;
     }
 
     .copy-wish-btn {
       align-self: flex-start;
       background: var(--gold-l);
-      color: var(--kajal);
-      border: 2px solid var(--kajal);
+      color: var(--text);
+      border: 2px solid var(--line-c);
       border-radius: 999px;
       padding: 6px 14px;
       font-family: 'Syne', sans-serif;
       font-size: 0.74rem;
       font-weight: 800;
-      box-shadow: 2px 3px 0 var(--kajal);
+      box-shadow: 2px 3px 0 var(--shadow-c);
     }
 
     /* Footer */
@@ -1434,7 +1461,7 @@
     }
 
     .footer p {
-      color: #e6d5c3;
+      color: var(--text-2);
       max-width: 480px;
       font-size: 0.92rem;
       margin: 0 0 10px;
@@ -1465,7 +1492,7 @@
     }
 
     .footer-base {
-      border-top: 1px dashed rgba(253, 243, 223, 0.25);
+      border-top: 1px dashed rgba(255, 220, 180, 0.14);
       margin-top: 40px;
       padding-top: 20px;
       display: flex;
@@ -1473,7 +1500,7 @@
       flex-wrap: wrap;
       gap: 12px;
       font-size: 0.8rem;
-      color: #cbb5a0;
+      color: var(--text-3);
     }
 
     .footer-base a {
@@ -1523,10 +1550,10 @@
         top: calc(100% + 8px);
         left: 0;
         right: 0;
-        background: var(--ivory);
-        border: 2.5px solid var(--kajal);
+        background: var(--surface-1);
+        border: 2.5px solid var(--line-c);
         border-radius: 18px;
-        box-shadow: 5px 6px 0 var(--kajal);
+        box-shadow: 5px 6px 0 var(--shadow-c);
         padding: 14px 18px;
         display: none;
         flex-direction: column;
@@ -1617,6 +1644,128 @@
         max-width: 680px;
         margin: 20px auto !important;
       }
+    }
+
+    /* ===== Dark "Himalayan night" colour layer (design & fonts unchanged) ===== */
+    body::before {
+      opacity: 0.14;
+    }
+
+    ::selection {
+      color: var(--on-accent);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 82% 28%, rgba(255, 138, 61, 0.20) 0%, transparent 46%),
+        radial-gradient(circle at 14% 75%, rgba(224, 83, 61, 0.14) 0%, transparent 45%),
+        linear-gradient(180deg, rgba(13, 8, 6, 0.4) 0%, rgba(20, 12, 9, 0.85) 100%);
+    }
+
+    .hero-hills {
+      opacity: 0.55;
+    }
+
+    .hero::after {
+      filter: invert(1) sepia(1) saturate(3) hue-rotate(-10deg);
+    }
+
+    /* Accent-filled elements get dark ink for contrast */
+    .btn-crimson,
+    .nav-links .nav-cta {
+      background: var(--ember);
+      color: var(--on-accent);
+    }
+
+    .btn-crimson:hover,
+    .nav-links .nav-cta:hover {
+      background: var(--ember);
+      color: var(--on-accent);
+      filter: brightness(1.07);
+    }
+
+    .btn-primary,
+    .floating-tag.tag-top,
+    .tier-pill,
+    .vibe-chip.active,
+    .copy-wish-btn,
+    .marquee-track .dev-chip {
+      color: var(--on-accent);
+    }
+
+    .btn-ivory:hover,
+    .vibe-chip:hover,
+    .taste-toggle:hover {
+      background: var(--surface-3);
+      border-color: var(--saffron);
+    }
+
+    .brand-mark {
+      background: var(--ember);
+      color: var(--on-accent);
+    }
+
+    .marquee {
+      background: var(--crimson-d);
+    }
+
+    .polaroid::before,
+    .chhara-card::before {
+      background: rgba(246, 196, 83, 0.85);
+    }
+
+    .chhara-verse {
+      border-left-color: var(--saffron);
+    }
+
+    .gen {
+      background:
+        radial-gradient(900px 500px at 80% 0%, rgba(255, 138, 61, 0.16), transparent 60%),
+        radial-gradient(700px 500px at 0% 100%, rgba(224, 83, 61, 0.12), transparent 60%),
+        #140C09;
+      border-top-color: var(--line-c);
+      border-bottom-color: var(--line-c);
+    }
+
+    .gen .sec-head p {
+      color: var(--text-2);
+    }
+
+    .field::placeholder {
+      color: var(--text-3);
+    }
+
+    .stamp-card-outer {
+      border-color: rgba(246, 196, 83, 0.55);
+    }
+
+    .stamp-card-inner {
+      border-color: var(--saffron);
+      background:
+        radial-gradient(circle at 50% 22%, rgba(255, 160, 70, 0.18) 0%, transparent 60%),
+        var(--surface-1);
+    }
+
+    .card-signoff {
+      color: var(--gold);
+    }
+
+    .footer {
+      background: #080504;
+    }
+
+    @media print {
+      #card,
+      #card .stamp-card-inner {
+        background: #fff !important;
+        box-shadow: none !important;
+      }
+      #card .card-vibe-tag,
+      #card .card-signoff { color: #8E281B !important; background: #fff !important; }
+      #card .card-to,
+      #card .card-msg-hi { color: #3B231A !important; }
+      #card .card-msg-en { color: #6E4F41 !important; }
+      #card .card-title-hi { color: #B83B2A !important; }
     }
   </style>
 </head>
@@ -1763,6 +1912,26 @@
           </div>
         </div>
       </div>
+      <!-- Panoramic Garhwal Himalayan Hills & Pine Ridge Background -->
+      <svg class="hero-hills" viewBox="0 0 1440 290" preserveAspectRatio="none" aria-hidden="true">
+        <!-- Distant Sunlit Snow-Capped Himalayan Peaks -->
+        <path d="M0 205 L115 128 L205 174 L335 48 L465 172 L595 92 L725 186 L880 34 L1045 178 L1165 112 L1295 176 L1385 104 L1440 146 L1440 290 L0 290 Z" fill="#E8C38E" opacity="0.52"/>
+        <!-- Snow Ridge Highlights -->
+        <path d="M282 99 L335 48 L394 106 L358 92 L335 74 L314 94 Z M822 92 L880 34 L948 98 L908 82 L880 60 L854 84 Z M556 124 L595 92 L636 128 L610 116 L595 106 L576 118 Z" fill="#FFFBF2" opacity="0.88"/>
+        <!-- Mid-Ground Terraced Pahadi Hills -->
+        <path d="M0 232 L145 184 L268 222 L420 144 L580 218 L705 166 L850 228 L1030 150 L1180 218 L1330 172 L1440 206 L1440 290 L0 290 Z" fill="#D99B26" opacity="0.34"/>
+        <!-- Rolling Terracotta Foothills -->
+        <path d="M0 258 L150 224 L310 248 L460 202 L630 250 L815 212 L985 256 L1120 214 L1285 252 L1440 226 L1440 290 L0 290 Z" fill="#B83B2A" opacity="0.28"/>
+        <!-- Glowing Hillside Village Diya Lights -->
+        <g fill="#F6C453" opacity="0.95">
+          <circle cx="418" cy="168" r="2.6"/><circle cx="432" cy="174" r="2"/><circle cx="405" cy="176" r="2.2"/>
+          <circle cx="702" cy="186" r="2.5"/><circle cx="718" cy="192" r="2"/><circle cx="688" cy="194" r="2.2"/>
+          <circle cx="1026" cy="172" r="2.8"/><circle cx="1042" cy="179" r="2.1"/><circle cx="1012" cy="181" r="2"/>
+          <circle cx="195" cy="204" r="2.2"/><circle cx="1325" cy="192" r="2.4"/>
+        </g>
+        <!-- Foreground Deodar Pine Ridge Silhouette -->
+        <path d="M0 278 L78 246 L108 278 L140 242 L176 278 L214 236 L252 278 L298 248 L338 278 L402 244 L450 278 L498 240 L552 278 L612 242 L668 278 L720 234 L766 278 L824 242 L880 278 L922 238 L980 278 L1030 242 L1088 278 L1122 244 L1172 278 L1224 238 L1280 278 L1334 246 L1392 278 L1440 254 L1440 290 L0 290 Z" fill="#6E4F41" opacity="0.32"/>
+      </svg>
     </section>
 
     <!-- 3. Diagonal Kinetic Marquee -->
@@ -2478,22 +2647,22 @@
           const msgVal = messageInput.value.trim() || preset.eng;
 
           // Warm Ivory Fill + Radial Golden Glow
-          ctx.fillStyle = '#FFFBF2';
+          ctx.fillStyle = '#1A100B';
           ctx.fillRect(0, 0, 1200, 800);
 
           const glow = ctx.createRadialGradient(600, 220, 30, 600, 360, 520);
-          glow.addColorStop(0, 'rgba(246, 196, 83, 0.34)');
+          glow.addColorStop(0, 'rgba(255, 160, 70, 0.30)');
           glow.addColorStop(0.6, 'rgba(224, 122, 46, 0.10)');
-          glow.addColorStop(1, 'rgba(255, 251, 242, 0)');
+          glow.addColorStop(1, 'rgba(26, 16, 11, 0)');
           ctx.fillStyle = glow;
           ctx.fillRect(0, 0, 1200, 800);
 
           // Solid Outer + Dashed Stamp Borders
-          ctx.strokeStyle = '#3B231A';
+          ctx.strokeStyle = 'rgba(246, 196, 83, 0.6)';
           ctx.lineWidth = 6;
           ctx.strokeRect(28, 28, 1144, 744);
 
-          ctx.strokeStyle = '#B83B2A';
+          ctx.strokeStyle = '#FF8A3D';
           ctx.lineWidth = 3.5;
           ctx.setLineDash([14, 10]);
           ctx.strokeRect(48, 48, 1104, 704);
@@ -2501,7 +2670,7 @@
 
           // Corner Aipan Diamonds
           const corners = [[76, 76], [1124, 76], [76, 724], [1124, 724]];
-          ctx.fillStyle = '#D99B26';
+          ctx.fillStyle = '#F6C453';
           for (const [cx, cy] of corners) {
             ctx.beginPath();
             ctx.moveTo(cx, cy - 12);
@@ -2515,7 +2684,7 @@
           // Top Vibe Header Pill
           ctx.textAlign = 'center';
           ctx.font = '800 18px Syne, Arial, sans-serif';
-          ctx.fillStyle = '#8E281B';
+          ctx.fillStyle = '#F6C453';
           ctx.fillText(preset.tag, 600, 106);
 
           // Drawn Vector Emblem (Himalayan Circle + Whirling Bhailo Ring)
@@ -2552,17 +2721,17 @@
           ctx.restore();
 
           // Devanagari Title
-          ctx.fillStyle = '#B83B2A';
+          ctx.fillStyle = '#FF8A3D';
           ctx.font = '700 46px "Tiro Devanagari Hindi", Georgia, serif';
           ctx.fillText('इगास-बग्वाल की लख-लख बधाइयां!', 600, 288);
 
           // Recipient Line
-          ctx.fillStyle = '#3B231A';
+          ctx.fillStyle = '#C9B6A6';
           ctx.font = '700 22px Syne, Arial, sans-serif';
           ctx.fillText(`To: ${toVal}`, 600, 334);
 
           // Hindi Blessing Lines
-          ctx.fillStyle = '#3B231A';
+          ctx.fillStyle = '#F7EDE2';
           ctx.font = '400 28px "Tiro Devanagari Hindi", Georgia, serif';
           let y = 392;
           for (const line of wrapCanvasText(ctx, preset.hindi, 920)) {
@@ -2572,7 +2741,7 @@
 
           // Wrapped Playfair Display Italic Message
           y += 18;
-          ctx.fillStyle = '#6E4F41';
+          ctx.fillStyle = '#C9B6A6';
           ctx.font = 'italic 600 26px "Playfair Display", Georgia, serif';
           for (const line of wrapCanvasText(ctx, `“${msgVal}”`, 900)) {
             ctx.fillText(line, 600, y);
@@ -2580,12 +2749,12 @@
           }
 
           // Caveat Handwritten Sign-off
-          ctx.fillStyle = '#8E281B';
+          ctx.fillStyle = '#F6C453';
           ctx.font = '700 36px Caveat, cursive, Georgia, serif';
           ctx.fillText(`— ${fromVal}   ✦   जय बद्री-केदार`, 600, 682);
 
           // Footer Metadata
-          ctx.fillStyle = '#6E4F41';
+          ctx.fillStyle = '#8C7768';
           ctx.font = '600 14px "Plus Jakarta Sans", Arial, sans-serif';
           ctx.fillText('BUDHI DIWALI • KARTIK EKADASHI • DEVBHOOMI UTTARAKHAND', 600, 726);
 

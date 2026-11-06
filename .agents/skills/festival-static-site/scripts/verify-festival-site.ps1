@@ -41,6 +41,18 @@ if (Test-Path $indexPath) {
     } else {
         Write-Host "[WARN] twitter:image does not match 'https://.../og-image.png'" -ForegroundColor Yellow
     }
+
+    if ($html -match 'class="hero-collage"' -and $html -match 'class="collage-back"' -and $html -match 'class="polaroid"' -and $html -match 'floating-tag') {
+        Write-Host "[OK]   Hero Polaroid Collage (.hero-collage, .collage-back, .polaroid, .floating-tag) found" -ForegroundColor Green
+    } else {
+        Write-Host "[WARN] Hero Polaroid Collage classes missing in index.html" -ForegroundColor Yellow
+    }
+
+    if ($html -match 'body::before' -and $html -match 'data:image/svg\+xml') {
+        Write-Host "[OK]   Translucent SVG cultural background (body::before) found" -ForegroundColor Green
+    } else {
+        Write-Host "[WARN] Translucent SVG background (body::before) missing in index.html" -ForegroundColor Yellow
+    }
 }
 
 if ($missing.Count -gt 0) {
