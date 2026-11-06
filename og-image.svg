@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFBF2"/>
+      <stop offset="55%" stop-color="#FDF3DF"/>
+      <stop offset="100%" stop-color="#F7E2BE"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="76%" cy="46%" r="44%">
+      <stop offset="0%" stop-color="#F6C453" stop-opacity="0.48"/>
+      <stop offset="55%" stop-color="#E07A2E" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#E07A2E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardNight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A1D14"/>
+      <stop offset="100%" stop-color="#2A120C"/>
+    </linearGradient>
+    <linearGradient id="bhailoRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5C0"/>
+      <stop offset="45%" stop-color="#F6C453"/>
+      <stop offset="100%" stop-color="#E07A2E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Warm Sandalwood Ivory Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+  <rect width="1200" height="630" fill="url(#sunGlow)"/>
+
+  <!-- Outer Aipan Terracotta & Gold Frame -->
+  <rect x="24" y="24" width="1152" height="582" rx="26" fill="none" stroke="#B83B2A" stroke-width="4"/>
+  <rect x="36" y="36" width="1128" height="558" rx="20" fill="none" stroke="#D99B26" stroke-width="2" stroke-dasharray="10 8"/>
+
+  <!-- Translucent Aipan Mandala Watermark (Left/Center) -->
+  <g transform="translate(220, 315)" opacity="0.08" stroke="#B83B2A" fill="none" stroke-width="2.5">
+    <circle r="210"/>
+    <circle r="165" stroke-dasharray="8 8"/>
+    <circle r="115"/>
+    <polygon points="0,-190 134,-134 190,0 134,134 0,190 -134,134 -190,0 -134,-134"/>
+    <polygon points="0,-190 134,134 -190,0 134,-134 0,190 -134,-134 190,0 -134,134"/>
+  </g>
+
+  <!-- Left Column: Typography & Zine Badges -->
+  <g transform="translate(78, 96)">
+    <!-- Sticker Badge -->
+    <g transform="rotate(-1.8)">
+      <rect x="0" y="0" width="415" height="44" rx="22" fill="#FFE5CC" stroke="#3B231A" stroke-width="2.5"/>
+      <text x="22" y="28" font-family="Syne, Plus Jakarta Sans, Arial, sans-serif" font-size="16" font-weight="800" fill="#8E281B" letter-spacing="1.8">🏔️ KARTIK EKADASHI • UTTARAKHAND</text>
+    </g>
+
+    <!-- Native Devanagari Blessing -->
+    <text x="4" y="108" font-family="'Tiro Devanagari Hindi', Georgia, serif" font-size="40" font-weight="700" fill="#B83B2A">बल इगास-बग्वाल की हार्दिक शुभकामना</text>
+
+    <!-- Main Display Headline -->
+    <text x="0" y="185" font-family="Syne, Georgia, serif" font-size="68" font-weight="800" fill="#3B231A" letter-spacing="-1.5">Budhi Diwali,</text>
+    <text x="0" y="258" font-family="Georgia, 'Playfair Display', serif" font-style="italic" font-size="60" font-weight="700" fill="#E07A2E">where the hills</text>
+    <text x="0" y="330" font-family="Syne, Georgia, serif" font-size="64" font-weight="800" fill="#3B231A" letter-spacing="-1.5">whirl with light.</text>
+
+    <!-- Subcopy -->
+    <text x="4" y="384" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-size="22" font-weight="600" fill="#6E4F41">11 days after Diwali • Whirling Bhailo • Pahadi Bhoj • Greeting Studio</text>
+
+    <!-- Bottom Pill Tags -->
+    <g transform="translate(0, 412)">
+      <rect x="0" y="0" width="188" height="42" rx="21" fill="#B83B2A"/>
+      <text x="94" y="27" text-anchor="middle" font-family="Syne, Arial, sans-serif" font-size="16" font-weight="700" fill="#FFFBF2">🔥 Bhailo Khelna</text>
+
+      <rect x="204" y="0" width="192" height="42" rx="21" fill="#FFFBF2" stroke="#3B231A" stroke-width="2"/>
+      <text x="300" y="27" text-anchor="middle" font-family="Syne, Arial, sans-serif" font-size="16" font-weight="700" fill="#3B231A">🥁 Dhol-Damau</text>
+
+      <rect x="412" y="0" width="196" height="42" rx="21" fill="#FFFBF2" stroke="#3B231A" stroke-width="2"/>
+      <text x="510" y="27" text-anchor="middle" font-family="Syne, Arial, sans-serif" font-size="16" font-weight="700" fill="#3B231A">🍯 Arsa &amp; Swunla</text>
+    </g>
+  </g>
+
+  <!-- Right Column: Tilted Polaroid Collage Card -->
+  <g transform="translate(760, 82)">
+    <!-- Backing Terracotta Postcard -->
+    <g transform="rotate(-6 170 230)">
+      <rect x="8" y="14" width="335" height="425" rx="20" fill="#B83B2A" stroke="#3B231A" stroke-width="3"/>
+      <rect x="22" y="28" width="307" height="397" rx="14" fill="none" stroke="#F6C453" stroke-width="1.5" stroke-dasharray="6 5"/>
+    </g>
+
+    <!-- Main Polaroid Frame -->
+    <g transform="rotate(3 170 230)">
+      <rect x="24" y="18" width="340" height="432" rx="18" fill="#FFFBF2" stroke="#3B231A" stroke-width="3.5"/>
+      <!-- Washi Tape -->
+      <rect x="142" y="4" width="106" height="26" rx="4" fill="#F6C453" opacity="0.82" stroke="#8E281B" stroke-width="1.2" stroke-dasharray="4 3"/>
+      <!-- Polaroid Inner Art Stage -->
+      <rect x="44" y="42" width="300" height="295" rx="12" fill="url(#cardNight)" stroke="#3B231A" stroke-width="2.5"/>
+
+      <!-- Stars & Moon -->
+      <circle cx="82" cy="78" r="2.5" fill="#FFF5C0"/>
+      <circle cx="135" cy="66" r="2" fill="#F6C453"/>
+      <circle cx="295" cy="74" r="2.5" fill="#FFF5C0"/>
+      <circle cx="318" cy="108" r="2" fill="#F6C453"/>
+      <path d="M98 84 A16 16 0 1 0 118 104 A13 13 0 1 1 98 84 Z" fill="#F6C453"/>
+
+      <!-- Garhwal Himalayan Peaks -->
+      <path d="M44 275 L96 205 L138 242 L195 162 L248 232 L292 184 L344 238 L344 312 L44 312 Z" fill="#6B2B1E"/>
+      <path d="M174 190 L195 162 L218 193 L203 184 L195 174 L185 186 Z" fill="#FFFBF2" opacity="0.88"/>
+      <path d="M44 298 L344 298 L344 337 L44 337 Z" fill="#8E281B"/>
+      <line x1="44" y1="298" x2="344" y2="298" stroke="#F6C453" stroke-width="2"/>
+
+      <!-- Whirling Bhailo Fire Circle -->
+      <circle cx="198" cy="176" r="68" fill="none" stroke="url(#bhailoRing)" stroke-width="12" stroke-dasharray="260 66" stroke-linecap="round"/>
+      <circle cx="198" cy="176" r="48" fill="none" stroke="#FFFBF2" stroke-width="4" stroke-dasharray="80 48" stroke-linecap="round" opacity="0.9"/>
+      <!-- Torch & Flame -->
+      <line x1="162" y1="232" x2="198" y2="176" stroke="#D99B26" stroke-width="8" stroke-linecap="round"/>
+      <path d="M198 134 C222 158 186 168 210 192 C180 198 172 174 184 152 C188 164 194 152 198 134 Z" fill="#E07A2E"/>
+      <circle cx="198" cy="176" r="9" fill="#FFFBF2"/>
+
+      <!-- Polaroid Caption -->
+      <text x="60" y="366" font-family="Syne, Arial, sans-serif" font-size="14" font-weight="800" fill="#B83B2A" letter-spacing="1.5">FIG. 01 // BHAILO NIGHT</text>
+      <text x="194" y="402" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="22" font-weight="700" fill="#3B231A">“Bhailo Re Bhailo” ✨</text>
+      <text x="194" y="430" text-anchor="middle" font-family="'Tiro Devanagari Hindi', serif" font-size="17" fill="#6E4F41">जय बद्री-केदार • गढ़वाल हिमालय</text>
+    </g>
+  </g>
+</svg>
+
