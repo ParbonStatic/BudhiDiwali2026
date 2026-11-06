@@ -125,13 +125,17 @@ Use these curated design palettes, typography pairings, multi-day chapter struct
 
 ## 12. Igas-Bagwal / Budhi Diwali (Uttarakhand Himalayan Festival of Lights – Gen Z Zine Edition)
 - **Observed**: *Kartik Shukla Ekadashi* (11 days after Diwali across Garhwal & Kumaon, Devbhoomi Uttarakhand).
-- **Welcoming Warm Palette**:
-  - Surface Ivory (`--ivory`): `#FFFBF2` & Chandan Cream (`--cream`): `#FDF3DF`
-  - Pahadi *Geru* Terracotta (`--crimson`): `#B83B2A` & Deep Rust Maroon (`--crimson-d`): `#8E281B`
-  - Bhailo Marigold Saffron (`--saffron`): `#E07A2E` & Soft Festive Peach (`--peach`): `#FFE5CC`
-  - Honey Diya Gold (`--gold`): `#D99B26` & Bright Gold (`--gold-l`): `#F6C453`
-  - Deodar Pine (`--pine`): `#244728`, Roasted Espresso (`--kajal`): `#3B231A`, & Cinnamon Muted (`--muted`): `#6E4F41`
-  - Card Studio Surface (`.gen`): Warm Rosewood-Terracotta gradient (`linear-gradient(135deg, #6B2419 0%, #4A1810 100%)`)
+- **Warm "Himalayan Night" Palette (dark, fire-lit — shipped scheme)**:
+  - Hearth Background (`--bg`): `#0D0806` · Card Surfaces (`--surface-1/2/3`): `#1C120D` / `#241710` / `#2E1D15`
+  - Chandan-Cream Text (`--text`): `#F7EDE2` · Secondary (`--text-2`): `#C9B6A6` · Tertiary (`--text-3`): `#8C7768`
+  - Ember *Geru* Crimson (`--crimson`): `#E0533D` & Terracotta (`--crimson-d`): `#B83B2A` (marquee ribbon, backing postcard)
+  - Bhailo Marigold Saffron (`--saffron`): `#FF8A3D` · Honey Diya Gold (`--gold` / `--gold-l`): `#F6C453` · Deodar Pine (`--pine`): `#244728`
+  - Ember Gradient (`--ember`): `linear-gradient(120deg, #FFD97A 0%, #FF8A3D 48%, #E0533D 100%)` for primary buttons, nav CTA, and brand mark; dark ink `--on-accent` (`#1B0F09`) on all gold/ember fills
+  - Zine Structure: warm brown borders (`--line-c`: `#5E4334`) and translucent crimson hard offset shadows (`--shadow-c`: `rgba(224, 83, 61, 0.42)`)
+  - Card Studio Surface (`.gen`): `#140C09` with radial ember glows (`rgba(255, 138, 61, 0.16)` top-right, `rgba(224, 83, 61, 0.12)` bottom-left)
+  - `theme-color`: `#0D0806` · `og-image.svg` / `.png` and the `1200×800` PNG card use the same night palette
+- **Light Variant (original "Sunlit Hospitality" tokens, if a light build is requested)**:
+  - Ivory `#FFFBF2`, Cream `#FDF3DF`, Terracotta `#B83B2A`, Rust Maroon `#8E281B`, Saffron `#E07A2E`, Peach `#FFE5CC`, Gold `#D99B26` / `#F6C453`, Espresso `#3B231A`, Cinnamon `#6E4F41`; `.gen` rosewood gradient `linear-gradient(135deg, #6B2419 0%, #4A1810 100%)`
 - **Asymmetric Font Stack**:
   - `Syne` (700/800) for wide asymmetric display headers, section index pills (`01 // THE SACRED LORE`), and sticker tags.
   - `Playfair Display` (italic 400/600/700) spliced mid-headline (`Budhi *Diwali*, where the...`) with wavy underlines.

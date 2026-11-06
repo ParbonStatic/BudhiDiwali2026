@@ -11,6 +11,9 @@ A zero-build, single-page festival tribute site for **Igas-Bagwal (Budhi Diwali)
 ```powershell
 # The only automated check: required files + OG tags + key hero/background markers
 powershell -ExecutionPolicy Bypass -File .\.agents\skills\festival-static-site\scripts\verify-festival-site.ps1
+
+# Rebuild og-image.png (1200×630) from og-image.svg with headless Chrome/Edge and the real web fonts
+powershell -ExecutionPolicy Bypass -File .\.agents\skills\festival-static-site\scripts\render-og-image.ps1
 ```
 
 Deployment: `.github/workflows/static.yml` publishes the **entire repo root** to GitHub Pages on push to `main` (day-to-day work happens on `dev`). The production URL is `https://parbonstatic.github.io/BudhiDiwali2026/`.

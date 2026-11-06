@@ -8,8 +8,8 @@ Built with the **ParbonStatic** architecture, this site blends authentic Garhwal
 
 ## ✨ Key Features
 
-- **Warm Pahadi Hospitality Palette**: Uses sunlit sandalwood ivory (`#FFFBF2`), chandan cream (`#FDF3DF`), *Geru* red-ochre terracotta (`#B83B2A`), Bhailo marigold saffron (`#E07A2E`), honey gold (`#F6C453`), and roasted espresso brown (`#3B231A`) with zero harsh cold blacks.
-- **Translucent Cultural Background Artwork (`body::before`)**: Fixed, low-opacity (`0.12`) multi-layer inline SVG backdrop depicting an octagonal *Aipan* mandala, whirling *Bhailo* flame, and a `160×160` repeating Pahadi geometric lattice.
+- **Warm "Himalayan Night" Palette**: A dark, fire-lit scheme built on warm near-black hearth tones (`#0D0806` page, `#1C120D`–`#2E1D15` card surfaces) with chandan-cream text (`#F7EDE2`), *Geru* ember crimson (`#E0533D`), Bhailo marigold saffron (`#FF8A3D`), and honey diya gold (`#F6C453`). Primary buttons use a gold → saffron → crimson **ember gradient**, zine shadows glow in translucent crimson, and there are zero cold blacks.
+- **Translucent Cultural Background Artwork (`body::before`)**: Fixed, low-opacity (`0.14`) multi-layer inline SVG backdrop depicting a panoramic Himalayan ridgeline, an octagonal *Aipan* mandala with whirling *Bhailo* flame, and a `160×160` repeating Pahadi geometric lattice, plus a glowing `.hero-hills` horizon with village *diya* lights at the base of the hero.
 - **Asymmetric Mixed-Font Stack**: Combines `Syne` (wide display headers & index badges), `Playfair Display` italic (wavy-underlined editorial splices), `Caveat` (tilted handwritten margin scribbles & Polaroid captions), `Tiro Devanagari Hindi` (native folk chants & greetings), and `Plus Jakarta Sans` (body copy).
 - **Multi-Layer Hero Polaroid Collage (`.hero-collage`)**:
   - **Layer 1 (`.collage-back`, `z-index: 1`)**: Tilted (`-6.5deg`) backing Pahadi terracotta postcard.
@@ -19,7 +19,7 @@ Built with the **ParbonStatic** architecture, this site blends authentic Garhwal
   - **01 // The Sacred Lore**: Taped Garhwali *Bhailo* folk chant + rotated lore cards (*Madho Singh Bhandari's Return* & *News Crossing the High Passes*).
   - **02 // Core Rituals**: Staggered 3-column grid covering *Bhailo Khelna*, *Pashu Dhan Puja*, and *Aipan, Chhura & Jhumelo*.
   - **03 // Pahadi Bhoj Tier List**: Asymmetric 12-column Bento grid (`7 + 5` top row, `4 + 4 + 4` bottom row) with expandable tasting notes for *Arsa*, *Swunla & Urad Pakora*, *Gahat Dal & Mandua*, *Jhangora ki Kheer*, and *Pashu Pinda & Roat*.
-  - **04 // Virtual Bhailo & Greeting Card Studio**: Vibe preset chips (`✨ Classic Blessing`, `🔥 Bhailo Squad`, `🍯 Arsa Tax Due`, `🏔️ Himalayan Roots`), animated Bhailo spinner, warm-palette confetti burst, live stamp-bordered preview card, and a 4-action export bar (**Copy Text**, **Share 📲**, **Save `1200×800` PNG 📸**, **Print 🖨️**).
+  - **04 // Virtual Bhailo & Greeting Card Studio**: Vibe preset chips (`✨ Classic Blessing`, `🔥 Bhailo Squad`, `🍯 Arsa Tax Due`, `🏔️ Himalayan Roots`), animated Bhailo spinner, warm-palette confetti burst, live stamp-bordered dark preview card, and a 4-action export bar (**Copy Text**, **Share 📲**, **Save `1200×800` PNG 📸** rendered in the same night palette, **Print 🖨️** which switches the card to a printer-friendly light version).
   - **05 // 1-Tap Quick Wishes**: Instant copyable Garhwali/Hindi and English festival greetings.
 
 ---
@@ -63,6 +63,16 @@ Social media crawlers (WhatsApp, Facebook, LinkedIn, X) require **absolute `http
 - `<meta property="og:image:secure_url" content="https://parbonstatic.github.io/BudhiDiwali2026/og-image.png" />`
 - `<meta name="twitter:url" content="https://parbonstatic.github.io/BudhiDiwali2026/" />`
 - `<meta name="twitter:image" content="https://parbonstatic.github.io/BudhiDiwali2026/og-image.png" />`
+
+### Regenerating `og-image.png`
+
+`og-image.svg` is the editable source (dark Himalayan-night banner with the Bhailo Polaroid collage). After editing it, re-rasterize the PNG with headless Chrome/Edge so the real web fonts are used:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\.agents\skills\festival-static-site\scripts\render-og-image.ps1
+```
+
+Social platforms cache previews aggressively — use the Facebook Sharing Debugger or LinkedIn Post Inspector to force a refresh after deploying.
 
 ---
 
